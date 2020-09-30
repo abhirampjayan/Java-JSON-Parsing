@@ -36,4 +36,8 @@ public class Json {
         writer=writer.with(SerializationFeature.INDENT_OUTPUT);
         return writer.writeValueAsString(node);
     }
+    public static JsonNode objectToJson(Employee employee) throws IOException {
+        String json=objectMapper.writeValueAsString((employee));
+        return objectMapper.readTree(json);
+    }
 }

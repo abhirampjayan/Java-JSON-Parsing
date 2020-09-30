@@ -1,7 +1,6 @@
 package org.example;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 import static org.example.Json.*;
@@ -12,7 +11,7 @@ public class JacsonEcample {
         byte[] jsonData= Files.readAllBytes(Paths.get("employee.json"));
         Employee employee=objectMapper.readValue(jsonData,Employee.class);
         System.out.println(employee);*/
-        Employee employee= Json.readFile();
+        Employee employee= readFile();
         System.out.println(employee);
 
         /*Employee employee1=Employee.createEmployee();
@@ -22,9 +21,11 @@ public class JacsonEcample {
         objectMapper.writeValue(stringEmp,employee1);
         System.out.println(stringEmp);*/
         Json.writeFile(employee);
-        JsonNode jsonNode=Json.createJsonNode();
+        JsonNode jsonNode=createJsonNode();
         String s=jsonToString(jsonNode);
         System.out.println(jsonNode.get("name").asText());
         System.out.println(s);
+        JsonNode jsonNode1=objectToJson(employee);
+        System.out.println(jsonNode1);
     }
 }
