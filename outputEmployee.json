@@ -1,0 +1,16 @@
+{
+  "id" : 123,
+  "name" : "Pankaj",
+  "address" : {
+    "place" : "Albany Dr",
+    "city" : "San Jose",
+    "zipcode" : 95129
+  },
+  "properties" : {
+    "age" : "29 years",
+    "salary" : "1000 USD"
+  },
+  "permanent" : true,
+  "cities" : [ "Los Angeles", "New York" ],
+  "phoneNumbers" : [ 123456, 987654 ]
+}
